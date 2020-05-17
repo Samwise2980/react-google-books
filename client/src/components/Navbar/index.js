@@ -11,19 +11,19 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-sm navbar-light bg-light">
       <Link className="navbar-brand" to="/">
-        User directory
+        Google Books
       </Link>
       <div>
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link to="/home" className={navLinkClassName("/home")}>
-              Home
+            <Link to="/search" className={navLinkClassName("/search")}>
+              Search
             </Link>
           </li>
 
           <li className="nav-item">
-            <Link to="/search" className={navLinkClassName("/search")}>
-              search
+            <Link to="/saved" className={navLinkClassName("/saved")}>
+              Saved
             </Link>
           </li>
         </ul>

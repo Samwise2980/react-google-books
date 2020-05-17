@@ -1,23 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Nav from "./components/Navbar";
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
 
 import "./App.css";
-import API from "./utils/API";
 
 function App() {
-  const [searchResult, setSearchResult] = useState([]);
-  useEffect(() => {
-    const search = "harry potter";
-    API.booksSearch(search).then((response) => {
-      setSearchResult(response.data);
-    });
-  }, []);
-  console.log(searchResult);
+  document.title = "Google Books Search";
   return (
     <Router>
       <div>
         <Nav />
         <Switch>
+          <Route exact path="/">
+            <Search />
+          </Route>
           <Route exact path="/search">
             <Search />
           </Route>

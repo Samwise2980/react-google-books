@@ -12,7 +12,7 @@ function SearchForm(props) {
           name="term"
           type="text"
           className="form-control"
-          placeholder="Type a name, phone number, email, or date of birth"
+          placeholder="Type a book to search"
           id="term"
         />
       </div>
