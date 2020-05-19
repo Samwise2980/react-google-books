@@ -11,13 +11,16 @@ export default function Search() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    const search = "Harry Potter";
-    API.booksSearch(search).then((response) => {
+    const bookSearch = search
+    API.booksSearch(bookSearch).then((response) => {
       setSearchResult(response.data);
     });
-  }, []);
+  }, [search]);
 
-  const handleInputChange = (event) => setSearch(event.target.value);
+  const handleInputChange = event => {
+    const { value } = event.target;
+    setSearch(value);
+  };
 
   function handleBookSave(event) {
     event.preventDefault();
@@ -38,7 +41,7 @@ export default function Search() {
     <div>
       <Container>
         <Banner />
-        <SearchForm handleInputChange={handleInputChange} results={search} />
+        <SearchForm handleInputChange={handleInputChange} search={search} />
         <SearchResults>
           {searchResult.map((book) => (
             <Card key={book.googleId} {...book} handleBookSave={handleBookSave} />

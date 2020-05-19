@@ -9,11 +9,11 @@ function SearchForm(props) {
         <input
           value={props.search}
           onChange={props.handleInputChange}
-          name="term"
+          name="Search"
           type="text"
           className="form-control"
           placeholder="Type a book to search"
-          id="term"
+          id="Search"
         />
       </div>
     </form>
