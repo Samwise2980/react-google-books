@@ -1,30 +1,12 @@
 import React from "react";
 import "./style.css";
 
-function Card({
-  title,
-  authors,
-  description,
-  image,
-  link,
-  handleBookSave,
-  googleId,
-}) {
+function Card({ title, authors, description, image, link, deleteBook, _id }) {
   return (
     <div className="card mb-3">
       <div className="card-body">
-        <button
-          data-key={googleId}
-          data-authors={authors}
-          data-title={title}
-          data-description={description}
-          data-image={image}
-          data-link={link}
-          type="button"
-          onClick={handleBookSave}
-          className="btn mr-3"
-        >
-          Save
+        <button data-id={_id} type="button" onClick={deleteBook} className="btn mr-3">
+          Delete
         </button>
         <a
           className="btn mr-3"

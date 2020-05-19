@@ -11,12 +11,10 @@ const bookSchema = new Schema({
     type: String,
     required: true,
   },
-  // url for thumbnail image of the book
   image: {
     type: String,
     required: true,
   },
-  // link (url) to book info page in Google Books Api
   link: {
     type: String,
     required: true,

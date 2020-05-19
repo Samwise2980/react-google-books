@@ -9,7 +9,7 @@ function Navbar() {
     path === location.pathname ? "nav-link active" : "nav-link";
 
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light">
+    <nav className="navbar navbar-expand-sm navbar-dark">
       <Link className="navbar-brand" to="/">
         Google Books
       </Link>
