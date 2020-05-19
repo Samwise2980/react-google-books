@@ -16,7 +16,7 @@ A full stack react app that will let you search for books through the google boo
 ## Table of Contents
 - [Features](#features)
 - [Usage](#usage)
-- [Tests](#installation)
+- [Installation](#installation)
 - [Questions](#questions)
 
 
